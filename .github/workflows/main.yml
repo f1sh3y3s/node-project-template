@@ -10,6 +10,7 @@ jobs:
         uses: f1sh3y3s/hello-world-javascript-action@v1.0
         with:
           who-to-greet: 'f1sh3y3s the rain'
+          myToken: ${{secrets.GITHUB_TOKEN}}
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
